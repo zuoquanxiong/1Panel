@@ -2,8 +2,9 @@
 <p align="center"><b>Web-based linux server management control panel</b></p>
 <p align="center"><b>现代化、开源的 Linux 服务器运维管理面板</b></p>
 <p align="center">
-  <a href="https://trendshift.io/repositories/2462" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2462" alt="1Panel-dev%2F1Panel | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-  <a href="https://hellogithub.com/repository/71791baf930149ac9b84e1acf186573f" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=71791baf930149ac9b84e1acf186573f&claim_uid=p8vB3kP5CMrthiL&theme=dark&theme=neutral" alt="Featured｜HelloGitHub" style="width: 250px; height: 55px;" width="250" height="55" /></a>
+  <a href="https://trendshift.io/repositories/2462" target="_blank"><img src="https://trendshift.io/api/badge/repositories/2462" alt="1Panel-dev%2F1Panel | Trendshift" style="width: 180px; height: auto;" /></a>
+  <a href="https://hellogithub.com/repository/71791baf930149ac9b84e1acf186573f" target="_blank"><img src="https://api.hellogithub.com/v1/widgets/recommend.svg?rid=71791baf930149ac9b84e1acf186573f&claim_uid=p8vB3kP5CMrthiL&theme=dark&theme=neutral" alt="Featured｜HelloGitHub" style="width: 180px; height: auto;" /></a>
+  <a href="https://market.aliyun.com/products/53690006/cmjj00062740.html?userCode=kmemb8jp" target="_blank"><img src="https://resource.fit2cloud.com/1panel/img/aliyun/GitHub-Aliyun.png" alt="1Panel-dev%2F1Panel | Trendshift" style="width: 180px; height: auto;" /></a>
 </p>
 <p align="center">
   <a href="https://www.gnu.org/licenses/gpl-3.0.html"><img src="https://shields.io/github/license/1Panel-dev/1Panel?color=%231890FF" alt="License: GPL v3"></a>
