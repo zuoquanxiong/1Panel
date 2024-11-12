@@ -1,8 +1,10 @@
 package toolbox
 
 import (
+	"bufio"
 	"errors"
 	"fmt"
+	"golang.org/x/crypto/bcrypt"
 	"os"
 	"os/user"
 	"path"
@@ -19,6 +21,21 @@ import (
 type Ftp struct {
 	DefaultUser  string
 	DefaultGroup string
+}
+
+type FtpList struct {
+	User   string
+	Path   string
+	Status string
+}
+
+type FtpLog struct {
+	IP        string `json:"ip"`
+	User      string `json:"user"`
+	Time      string `json:"time"`
+	Operation string `json:"operation"`
+	Status    string `json:"status"`
+	Size      string `json:"size"`
 }
 
 type FtpClient interface {
@@ -88,9 +105,19 @@ func (f *Ftp) Operate(operate string) error {
 }
 
 func (f *Ftp) UserAdd(username, passwd, path string) error {
-	std, err := cmd.Execf("pure-pw useradd %s -u %s -d %s <<EOF \n%s\n%s\nEOF", username, f.DefaultUser, path, passwd, passwd)
+	entry, err := generatePureFtpEntrySimple(username, passwd, path)
 	if err != nil {
-		return errors.New(std)
+		return err
+	}
+	pwdFile, err := os.OpenFile("/etc/pure-ftpd/pureftpd.passwd", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+	if err != nil {
+		return err
+	}
+	defer pwdFile.Close()
+
+	_, err = pwdFile.WriteString("\n" + entry + "\n")
+	if err != nil {
+		return err
 	}
 	_ = f.Reload()
 	std2, err := cmd.Execf("chown -R %s:%s %s", f.DefaultUser, f.DefaultGroup, path)
@@ -110,10 +137,54 @@ func (f *Ftp) UserDel(username string) error {
 }
 
 func (f *Ftp) SetPasswd(username, passwd string) error {
-	std, err := cmd.Execf("pure-pw passwd %s <<EOF \n%s\n%s\nEOF", username, passwd, passwd)
+	hashedPassword, err := hashPassword(passwd)
 	if err != nil {
-		return errors.New(std)
+		return err
 	}
+	// read now
+	pwdFile, err := os.Open("/etc/pure-ftpd/pureftpd.passwd")
+	if err != nil {
+		return err
+	}
+	defer pwdFile.Close()
+
+	var entrys []string
+	scanner := bufio.NewScanner(pwdFile)
+	for scanner.Scan() {
+		line := scanner.Text()
+		if line == "" {
+			continue
+		}
+		userEntry := strings.Split(line, ":")
+		if len(userEntry) < 2 {
+			continue
+		}
+		if userEntry[0] == username {
+			userEntry[1] = string(hashedPassword)
+			line = strings.Join(userEntry, ":")
+		}
+		entrys = append(entrys, line)
+	}
+
+	if err := scanner.Err(); err != nil {
+		return err
+	}
+	pwdFile.Close()
+
+	// write new
+	pwdFile, err = os.Create("/etc/pure-ftpd/pureftpd.passwd")
+	if err != nil {
+		return err
+	}
+	defer pwdFile.Close()
+
+	for _, entry := range entrys {
+		_, err := pwdFile.WriteString(entry + "\n")
+		if err != nil {
+			return err
+		}
+	}
+
 	return nil
 }
 
@@ -166,12 +237,6 @@ func (f *Ftp) LoadList() ([]FtpList, error) {
 		lists = append(lists, FtpList{User: parts[0], Path: strings.ReplaceAll(parts[1], "/./", ""), Status: status})
 	}
 	return lists, nil
-}
-
-type FtpList struct {
-	User   string
-	Path   string
-	Status string
 }
 
 func (f *Ftp) Reload() error {
@@ -262,11 +327,51 @@ func loadLogsByFiles(fileList []string, user, operation string) []FtpLog {
 	return logs
 }
 
-type FtpLog struct {
-	IP        string `json:"ip"`
-	User      string `json:"user"`
-	Time      string `json:"time"`
-	Operation string `json:"operation"`
-	Status    string `json:"status"`
-	Size      string `json:"size"`
+func hashPassword(password string) ([]byte, error) {
+	// Hash the password using bcrypt with a cost of 10
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(password), bcrypt.DefaultCost)
+	if err != nil {
+		return nil, err
+	}
+	return hashedPassword, nil
+}
+
+func generatePureFtpEntrySimple(username, password, path string) (string, error) {
+	return generatePureFtpEntry(username, password, 1000, 1000, "", path+"/./",
+		"", "", "", "", "",
+		"", "", "", "", "", "", "")
+}
+
+func generatePureFtpEntry(username, password string, uid, gid int, gecos, homedir,
+	uploadBandwidth, downloadBandwidth, uploadRatio, downloadRatio, maxConnections, filesQuota, sizeQuota,
+	authorizedLocalIPs, refusedLocalIPs, authorizedClientIPs, refusedClientIPs, timeRestrictions string) (string, error) {
+
+	hashedPassword, err := hashPassword(password)
+	if err != nil {
+		return "", err
+	}
+
+	// Format the entry
+	entry := fmt.Sprintf("%s:%s:%d:%d:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s:%s",
+		username,
+		hashedPassword,
+		uid,
+		gid,
+		gecos,
+		homedir,
+		uploadBandwidth,
+		downloadBandwidth,
+		uploadRatio,
+		downloadRatio,
+		maxConnections,
+		filesQuota,
+		sizeQuota,
+		authorizedLocalIPs,
+		refusedLocalIPs,
+		authorizedClientIPs,
+		refusedClientIPs,
+		timeRestrictions,
+	)
+
+	return entry, nil
 }
