@@ -1938,6 +1938,7 @@ const message = {
         SSLList: 'Certificate List',
         createDnsAccount: 'DNS Account',
         aliyun: 'Aliyun',
+        volcengine: 'Volcengine',
         manual: 'Manual parsing',
         key: 'Key',
         check: 'View',

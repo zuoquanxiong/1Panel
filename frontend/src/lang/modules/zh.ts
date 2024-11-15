@@ -1797,6 +1797,7 @@ const message = {
         SSLList: '证书列表',
         createDnsAccount: 'DNS账户',
         aliyun: '阿里云',
+        volcengine: '火山引擎',
         manual: '手动解析',
         key: '密钥',
         check: '查看',
