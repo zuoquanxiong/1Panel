@@ -1,11 +1,8 @@
 on:
   push:
-    # Sequence of patterns matched against refs/tags
     tags:
-      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
-
+      - 'v*'
 name: Create Release And Upload assets
-
 jobs:
   create-release:
     runs-on: ubuntu-latest
@@ -36,22 +33,6 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           draft: true
-          body: |
-            # 一、安装和升级
-
-            ## 1.1 一键安装
-            ```sh
-            curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh
-            ```
-
-            ## 1.2 在线升级
-
-            登录 1Panel Web 控制台，在页面右下角点击 **【检查更新】** 进行在线升级。
-
-            >更多信息请查阅在线文档：https://1panel.cn/docs/
-
-            # 二、更新日志
-
           files: |
             dist/*.tar.gz
             dist/checksums.txt

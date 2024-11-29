@@ -1,13 +1,10 @@
 name: LLM Code Review
-
 permissions:
   contents: read
   pull-requests: write
-
 on:
   pull_request:
     types: [opened, reopened, synchronize]
-
 jobs:
   llm-code-review:
     runs-on: ubuntu-latest
