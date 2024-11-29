@@ -6,8 +6,8 @@ before:
   hooks:
     # - export NODE_OPTIONS="--max-old-space-size=8192"
     # - make build_web
-    - chmod +x ./script.sh
-    - ./script.sh
+    - chmod +x ./ci/script.sh
+    - ./ci/script.sh
     - sed -i 's@ORIGINAL_VERSION=.*@ORIGINAL_VERSION=v{{ .Version }}@g' 1pctl
     - go mod tidy
     
@@ -42,6 +42,7 @@ archives:
       - install.sh
       - README.md
       - LICENSE
+      - GeoIP.mmdb
 
 checksum:
   name_template: 'checksums.txt'

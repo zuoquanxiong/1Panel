@@ -17,4 +17,8 @@ if [ ! -f "install.sh" ]; then
   wget https://github.com/1Panel-dev/installer/raw/main/install.sh
 fi
 
+if [ ! -f "GeoIP.mmdb" ]; then 
+  wget https://resource.1panel.hk/geo/GeoIP.mmdb
+fi
+
 chmod 755 1pctl install.sh

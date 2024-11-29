@@ -22,13 +22,11 @@ build/1panel
 *.iml
 *.ipr
 
-
 # Test binary, built with `go test -c`
 *.test
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
-
 
 # Dependency directories
 /pkg/
@@ -42,7 +40,6 @@ frontend/components.d.ts
 frontend/src/xpack
 backend/xpack
 *_xpack.go
-
 .history/
 dist/
 1pctl

@@ -2,7 +2,7 @@ GOCMD=go
 GOBUILD=$(GOCMD) build
 GOCLEAN=$(GOCMD) clean
 GOARCH=$(shell go env GOARCH)
-GOOS=$(shell go env GOOS )
+GOOS=$(shell go env GOOS)
 
 BASE_PAH := $(shell pwd)
 BUILD_PATH = $(BASE_PAH)/build
