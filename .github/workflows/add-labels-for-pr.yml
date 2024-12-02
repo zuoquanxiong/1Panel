@@ -1,5 +1,5 @@
-on: pull_request
 name: General PR Handling for 1Panel
+on: pull_request
 permissions:
   pull-requests: write
 jobs:
