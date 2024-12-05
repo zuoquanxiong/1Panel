@@ -32,7 +32,11 @@ func NewPostgresqlClient(conn client.DBInfo) (PostgresqlClient, error) {
 		return client.NewLocal(connArgs, conn.Address, conn.Username, conn.Password, conn.Database), nil
 	}
 
-	connArgs := fmt.Sprintf("postgres://%s:%s@%s:%d/?sslmode=disable", conn.Username, conn.Password, conn.Address, conn.Port)
+	// Escape username and password to handle special characters
+	escapedUsername := url.QueryEscape(username)
+	escapedPassword := url.QueryEscape(password)
+
+	connArgs := fmt.Sprintf("postgres://%s:%s@%s:%d/?sslmode=disable", escapedUsername, escapedPassword, conn.Address, conn.Port)
 	db, err := sql.Open("pgx", connArgs)
 	if err != nil {
 		return nil, err
