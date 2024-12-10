@@ -42,7 +42,7 @@ archives:
       - install.sh
       - README.md
       - LICENSE
-      - GeoIP.mmdb
+      - lang/*
 
 checksum:
   name_template: 'checksums.txt'
