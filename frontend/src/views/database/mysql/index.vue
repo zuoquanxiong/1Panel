@@ -227,7 +227,7 @@
         </el-card>
 
         <div v-if="dbOptionsLocal.length === 0 && dbOptionsRemote.length === 0">
-            <LayoutContent :title="'MySQL ' + $t('menu.database')" :divider="true">
+            <LayoutContent :title="'MySQL ' + $t('menu.database').toLowerCase()" :divider="true">
                 <template #main>
                     <div class="app-warn">
                         <div class="flex flex-col gap-2 items-center justify-center w-full sm:flex-row">
