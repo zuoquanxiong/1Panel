@@ -1246,7 +1246,7 @@ const message = {
         infoDetail: 'File properties',
         root: 'Root directory',
         list: 'File list',
-        sub: 'Include subdirectories',
+        sub: 'Subdirectories',
         downloadSuccess: 'Successfully downloaded',
         theme: 'Theme',
         language: 'Language',
