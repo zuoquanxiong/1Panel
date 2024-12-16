@@ -29,7 +29,7 @@ Have questions or suggestions? Please submit a GitHub Issue. We value your feedb
 
 ## Screenshot
 
-![UI Display](https://resource.fit2cloud.com/1panel/img/overview_en.png)
+![UI Display](https://resource.1panel.hk/img/1panel.png)
 
 ## Star History
 
