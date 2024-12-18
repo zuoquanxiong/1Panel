@@ -6,7 +6,7 @@
   <a href="https://github.com/1Panel-dev/1Panel/releases"><img src="https://img.shields.io/github/v/release/1Panel-dev/1Panel" alt="GitHub release"></a>
   <a href="https://github.com/1Panel-dev/1Panel"><img src="https://img.shields.io/github/stars/1Panel-dev/1Panel?color=%231890FF&style=flat-square" alt="Stars"></a>
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2F1Panel-dev%2F1Panel?ref=badge_shield"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2F1Panel-dev%2F1Panel.svg?type=shield" alt="FOSSA Status"></a><br>
-  [<a href="/README.md">English</a>] | [<a href="/docs/README-Hans.md">中文(简体)</a>] | [<a href="/docs/README.zh-Hant.md">中文(繁體)</a>] | [<a href="/docs/README.ja.md">日本語</a>]
+  [<a href="/README.md">English</a>] | [<a href="/docs/README.zh-Hans.md">中文(简体)</a>] | [<a href="/docs/README.zh-Hant.md">中文(繁體)</a>] | [<a href="/docs/README.ja.md">日本語</a>]
 </p>
 
 ------------------------------
