@@ -524,7 +524,7 @@ const message = {
         readRndBufferSizeHelper: '* connections, random read buffer size',
         joinBufferSizeHelper: '* connections, association table cache size',
         threadStackelper: '* connections, stack size per thread',
-        binlogCacheSizeHelper: '* onnections, binary log cache size (multiples of 4096)',
+        binlogCacheSizeHelper: '* connections, binary log cache size (multiples of 4096)',
         threadCacheSizeHelper: 'Thread pool size',
         tableOpenCacheHelper: 'Table cache',
         maxConnectionsHelper: 'Max connections',
