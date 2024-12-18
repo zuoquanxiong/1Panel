@@ -114,7 +114,7 @@ const message = {
             Upgrading: 'System upgrade, please wait...',
             Restarting: 'System restart, please wait...',
             Recovering: 'Recovering from snapshot, please wait...',
-            Rollbacking: 'Rollbacking from snapshot, please wait...',
+            Rollbacking: 'Rolling back from snapshot, please wait...',
         },
         msg: {
             noneData: 'No data available',
@@ -222,7 +222,7 @@ const message = {
             paramComplexity: `This field mustn't start and end with special characters and must consist of English, numbers, "{0}" characters with a length of 6-128.`,
             paramUrlAndPort: 'This field must be in the format of "http(s)://(domain name/ip):(port)".',
             nginxDoc: 'This field must consist of English, numbers and "." characters.',
-            appName: `This field musnt't start and end with "-" and "_" characters and must consist of English, numbers, "-", and "_" characters with a length of 2-30.`,
+            appName: `This field mustn't start and end with "-" and "_" characters and must consist of English, numbers, "-", and "_" characters with a length of 2-30.`,
             containerName: 'Supports letters, numbers, -, _ and .; cannot start with - _ or .; length: 2-128',
             mirror: 'The mirror acceleration address should start with http(s)://, support English letters (both uppercase and lowercase), numbers, . / and -, and should not contain blank lines.',
             disableFunction: 'Only support letters ,underscores,and,',
