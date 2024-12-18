@@ -351,7 +351,7 @@ const message = {
         overview: 'Overview',
         entranceHelper: `Security entrance isn't enabled. You can enable it in "Settings -> Security" to improve system security.`,
         appInstalled: 'Applications',
-        systemInfo: 'System infomation',
+        systemInfo: 'System information',
         hostname: 'Hostname',
         platformVersion: 'Operating system',
         kernelVersion: 'Kernel',
