@@ -2153,7 +2153,7 @@ const message = {
         runDirHelper2: 'Please ensure that the secondary running directory is under the index directory',
         openrestyHelper:
             'OpenResty default HTTP port: {0} HTTPS port: {1}, which may affect website domain name access and HTTPS forced redirect',
-        primaryDomainHelper: 'Exmaple: example.com or example.com:8080',
+        primaryDomainHelper: 'Example: example.com or example.com:8080',
         acmeAccountType: 'Account type',
         keyType: 'Key algorithm',
         tencentCloud: 'Tencent Cloud',
