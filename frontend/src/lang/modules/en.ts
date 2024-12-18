@@ -1460,7 +1460,7 @@ const message = {
         duplicatePassword: 'The new password cannot be the same as the original password, please re-enter!',
         diskClean: 'Cache clean',
         developerMode: 'Preview Program',
-        developerModeHelper: `You will get to expirence new features and fixes before they're released broadly and give early feedback.`,
+        developerModeHelper: `You will get to experience new features and fixes before they're released broadly and give early feedback.`,
         thirdParty: 'Third-party accounts',
         addBackupAccount: 'Add {0}',
         noTypeForCreate: 'No backup type is currently created',
