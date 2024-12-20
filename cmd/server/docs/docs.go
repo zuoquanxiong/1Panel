@@ -8676,7 +8676,7 @@ const docTemplate = `{
                 "tags": [
                     "Firewall"
                 ],
-                "summary": "Uodate address group",
+                "summary": "Update address group",
                 "parameters": [
                     {
                         "description": "request",
