@@ -14,7 +14,7 @@ ErrApiConfigIPInvalid: "API Interface IP is not on the whitelist: {{ .detail }}"
 ErrApiConfigDisable: "This interface prohibits the use of API Interface calls: {{ .detail }}"
 
 #common
-ErrNameIsExist: "Name is already exists"
+ErrNameIsExist: "Name already exists"
 ErrDemoEnvironment: "Demo server, prohibit this operation!"
 ErrCmdTimeout: "Command execution timed out!"
 ErrCmdIllegal: "The command contains illegal characters. Please modify and try again!"
@@ -88,8 +88,8 @@ ErrInvalidChar: "Illegal characters are prohibited"
 ErrPathNotDelete: "The selected directory cannot be deleted"
 
 #website
-ErrDomainIsExist: "Domain is already exist"
-ErrAliasIsExist: "Alias is already exist"
+ErrDomainIsExist: "The domain name already exists"
+ErrAliasIsExist: "The alias already exists"
 ErrAppDelete: 'Other Website use this App'
 ErrGroupIsUsed: "The group is in use and can't be deleted"
 ErrBackupMatch: "the backup file doesn't match the current partial data of the website: {{ .detail}}"
