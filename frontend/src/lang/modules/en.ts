@@ -29,7 +29,7 @@ const message = {
             reset: 'Reset',
             restart: 'Restart',
             conn: 'Connect',
-            disconn: 'Disconnect',
+            disconnect: 'Disconnect',
             clean: 'Clean',
             login: 'Login',
             close: 'Close',

@@ -28,7 +28,7 @@ const message = {
             reset: '重置',
             restart: '重啟',
             conn: '連接',
-            disconn: '斷開',
+            disconnect: '斷開',
             clean: '清空',
             login: '登錄',
             close: '關閉',

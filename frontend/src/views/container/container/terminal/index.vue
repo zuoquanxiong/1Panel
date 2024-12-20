@@ -44,7 +44,7 @@
             <el-button v-if="!terminalOpen" @click="initTerm(formRef)">
                 {{ $t('commons.button.conn') }}
             </el-button>
-            <el-button v-else @click="onClose()">{{ $t('commons.button.disconn') }}</el-button>
+            <el-button v-else @click="onClose()">{{ $t('commons.button.disconnect') }}</el-button>
             <Terminal
                 style="height: calc(100vh - 302px); margin-top: 18px"
                 ref="terminalRef"
