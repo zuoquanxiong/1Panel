@@ -68,7 +68,7 @@
                             </div>
                         </div>
                         <el-divider class="divider" />
-                        <div v-if="s3Data.id !== 0" style="margin-left: 20px">
+                        <div v-if="s3Data.id !== 0" class="ml-5">
                             <el-form-item label="Region">
                                 {{ s3Data.varsJson['region'] }}
                             </el-form-item>
