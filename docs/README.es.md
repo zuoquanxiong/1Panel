@@ -9,13 +9,11 @@
   <a href="https://app.codacy.com/gh/1Panel-dev/1Panel?utm_source=github.com&utm_medium=referral&utm_content=1Panel-dev/1Panel&utm_campaign=Badge_Grade_Dashboard"><img src="https://app.codacy.com/project/badge/Grade/da67574fd82b473992781d1386b937ef" alt="Codacy"></a>
   <a href="https://github.com/1Panel-dev/1Panel/releases"><img src="https://img.shields.io/github/v/release/1Panel-dev/1Panel" alt="GitHub release"></a>
   <a href="https://github.com/1Panel-dev/1Panel"><img src="https://img.shields.io/github/stars/1Panel-dev/1Panel?color=%231890FF&style=flat-square" alt="Stars"></a><br>
-  [<a href="/README.md">English</a>] | [<a href="/docs/README.zh-Hans.md">中文(简体)</a>] | [<a href="/docs/README.zh-Hant.md">中文(繁體)</a>] | [<a href="/docs/README.ja.md">日本語</a>] | [<a href="/docs/README.pt-br.md">Português (Brasil)</a>] | [<a href="/docs/README.ko.md">한국어</a>] | [<a href="/docs/README.id.md">Bahasa Indonesia</a>] | [<a href="/docs/README.es.md">Spanish</a>]
+  [<a href="/README.md">English</a>] | [<a href="/docs/README.zh-Hans.md">中文(简体)</a>] | [<a href="/docs/README.zh-Hant.md">中文(繁體)</a>] | [<a href="/docs/README.ja.md">日本語</a>] | [<a href="/docs/README.pt-br.md">Português (Brasil)</a>] | [<a href="/docs/README.ko.md">한국어</a>] | [<a href="/docs/README.id.md">Bahasa Indonesia</a>] | [<a href="/docs/README.es.md">Español</a >]
 </p>
 
 ------------------------------
-
-¿Qué es 1Panel?  
-1Panel es una nueva generación de panel de gestión de operaciones para servidores Linux.  
+1Panel es un panel de control moderno y de código abierto basado en la web para la gestión de servidores Linux.
 
 - **Gestión eficiente**: los usuarios pueden gestionar fácilmente servidores Linux a través de una interfaz web, como monitoreo de hosts, gestión de archivos, gestión de bases de datos, gestión de contenedores, entre otros;  
 - **Creación rápida de sitios web**: integración profunda con el software de creación de sitios web de código abierto WordPress y Halo, operaciones como vinculación de dominios y configuración de certificados SSL se realizan con un solo clic;  
