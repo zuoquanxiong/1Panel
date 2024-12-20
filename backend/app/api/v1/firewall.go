@@ -203,7 +203,7 @@ func (b *BaseApi) UpdatePortRule(c *gin.Context) {
 }
 
 // @Tags Firewall
-// @Summary Uodate address group
+// @Summary Update address group
 // @Accept json
 // @Param request body dto.AddrRuleUpdate true "request"
 // @Success 200
