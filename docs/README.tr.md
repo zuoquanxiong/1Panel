@@ -15,8 +15,6 @@
   [<a href="/README.md">English</a>] | [<a href="/docs/README.zh-Hans.md">中文(简体)</a>] | [<a href="/docs/README.zh-Hant.md">中文(繁體)</a>] | [<a href="/docs/README.ja.md">日本語</a>] | [<a href="/docs/README.pt-br.md">Português (Brasil)</a>] | [<a href="/docs/README.ko.md">한국어</a>] | [<a href="/docs/README.id.md">Bahasa Indonesia</a>] | [<a href="/docs/README.tr.md">Türkçe</a >]
 </p>
 
-[![Watch the video](https://resource.fit2cloud.com/1panel/img/overview_video.png)](https://www.bilibili.com/video/BV1Mt421n7LZ/)
-
 ------------------------------
 ## 1Panel nedir?？
 
@@ -34,7 +32,7 @@ Tek Tuşlu Yedekleme: Tek tuşla yedekleme ve geri yüklemeyi destekler. Kullan�
 Aşağıdaki komutu çalıştırarak tek tuşlu yüklemeyi yapın 1Panel:
 
 ```sh
-curl -sSL https://resource.fit2cloud.com/1panel/package/quick_start.sh -o quick_start.sh && sudo bash quick_start.sh
+curl -sSL https://resource.1panel.hk/quick_start.sh -o quick_start.sh && bash quick_start.sh
 ```
 
 Eğer çevrimdışı bir ortamda kullanılacak ise, kullanmanızı tavsiye ederiz [Paket yükleme yöntemi](https://1panel.cn/docs/installation/package_installation/) Yükleme ve dağıtımı yapmak.
