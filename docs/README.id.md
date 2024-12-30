@@ -63,8 +63,8 @@ Jika Anda menemukan masalah keamanan apa pun, silakan hubungi kami melalui: wang
 
 ## License
 
-Licensed under The GNU General Public License version 3 (GPLv3)  (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+Dilindungi di bawah Lisensi GNU General Public License versi 3 (GPLv3) (selanjutnya disebut “Lisensi”); Anda tidak diperbolehkan menggunakan file ini kecuali sesuai dengan ketentuan Lisensi. Anda dapat memperoleh salinan Lisensi di
 
-<https://www.gnu.org/licenses/gpl-3.0.html>
+https://www.gnu.org/licenses/gpl-3.0.html
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+Kecuali diwajibkan oleh hukum yang berlaku atau disetujui secara tertulis, perangkat lunak yang didistribusikan berdasarkan Lisensi ini disediakan “APA ADANYA” TANPA JAMINAN APAPUN, baik tersurat maupun tersirat. Lihat Lisensi untuk informasi lebih lanjut mengenai hak dan batasan dalam Lisensi ini.

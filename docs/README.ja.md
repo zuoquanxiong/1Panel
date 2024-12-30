@@ -61,10 +61,8 @@ curl -sSL https://resource.1panel.hk/quick_start.sh -o quick_start.sh && bash qu
 
 ## License
 
-Copyright (c) 2014-2024 [FIT2CLOUD 飞致云](https://fit2cloud.com/), All rights reserved.
-
-Licensed under The GNU General Public License version 3 (GPLv3)  (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+このファイルは、GNU General Public License バージョン 3 (GPLv3)（以下「ライセンス」）の下でライセンスされています。ライセンスに従わない限り、このファイルを使用することはできません。ライセンスのコピーは以下で取得できます。
 
 <https://www.gnu.org/licenses/gpl-3.0.html>
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+適用法により要求される場合、または書面で同意される場合を除き、ライセンスの下で配布されるソフトウェアは「現状のまま（AS IS）」で提供され、いかなる種類の保証もありません。ライセンスにおける特定の権利および制限については、ライセンスを参照してください。
