@@ -2,6 +2,7 @@ import { createI18n } from 'vue-i18n';
 import zh from './modules/zh';
 import tw from './modules/tw';
 import en from './modules/en';
+import jp from './modules/jp';
 import ru from './modules/ru';
 import ms from './modules/ms';
 
@@ -14,6 +15,7 @@ const i18n = createI18n({
         zh,
         tw,
         en,
+        jp,
         ru,
         ms,
     },

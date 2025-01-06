@@ -99,6 +99,7 @@ func Init() {
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/zh-Hant.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/fa.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/pt.yaml")
+	_, _ = bundle.LoadMessageFileFS(fs, "lang/jp.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/ru.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/ms.yaml")
 }
