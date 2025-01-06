@@ -84,6 +84,10 @@ func UseI18n() gin.HandlerFunc {
 		if lang == "" {
 			lang = "zh"
 		}
+		//(dev: lucasplcorrea) - Ensuring support for pt-BR as a separate language
+		if lang == "pt-BR" {
+			lang = "pt-BR"
+		}
 		global.I18n = i18n.NewLocalizer(bundle, lang)
 	}
 }
@@ -99,6 +103,8 @@ func Init() {
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/zh-Hant.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/fa.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/pt.yaml")
+	// (dev: lucasplcorrea) - Add pt-BR.yaml
+	_, _ = bundle.LoadMessageFileFS(fs, "lang/pt-BR.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/jp.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/ru.yaml")
 	_, _ = bundle.LoadMessageFileFS(fs, "lang/ms.yaml")
@@ -108,9 +114,7 @@ func UseI18nForCmd(lang string) {
 	if lang == "" {
 		lang = "en"
 	}
-	if lang == "pt-BR" {
-		lang = "pt"
-	}
+
 	if bundle == nil {
 		Init()
 	}

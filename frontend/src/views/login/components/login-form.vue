@@ -55,20 +55,16 @@
                                         <el-dropdown-item v-if="globalStore.isIntl" command="en">
                                             English
                                         </el-dropdown-item>
-                                        <el-dropdown-item v-if="globalStore.isIntl" command="jp">
-                                            日本語
-                                        </el-dropdown-item>
                                         <el-dropdown-item command="zh">中文(简体)</el-dropdown-item>
                                         <el-dropdown-item command="tw">中文(繁體)</el-dropdown-item>
                                         <el-dropdown-item v-if="!globalStore.isIntl" command="en">
                                             English
                                         </el-dropdown-item>
-                                        <el-dropdown-item v-if="!globalStore.isIntl" command="jp">
-                                            日本語
-                                        </el-dropdown-item>
+                                        <el-dropdown-item command="pt-BR">Portugês (Brasil)</el-dropdown-item>
+                                        <el-dropdown-item command="jp">日本語</el-dropdown-item>
+                                        <el-dropdown-item command="ru">Русский</el-dropdown-item>
+                                        <el-dropdown-item command="ms">Bahasa Melayu</el-dropdown-item>
                                     </el-dropdown-menu>
-                                    <el-dropdown-item command="ru">Русский</el-dropdown-item>
-                                    <el-dropdown-item command="ms">Bahasa Melayu</el-dropdown-item>
                                 </template>
                             </el-dropdown>
                         </div>
@@ -278,7 +274,9 @@ function handleCommand(command: string) {
         dropdownText.value = '中文(简体)';
     } else if (command === 'en') {
         dropdownText.value = 'English';
-    } else if (command === 'tw') {
+    } else if (command === 'pt-BR') {
+        dropdownText.value = 'Português (Brasil)';
+    }else if (command === 'tw') {
         dropdownText.value = '中文(繁體)';
     } else if (command === 'jp') {
         dropdownText.value = '日本語';
